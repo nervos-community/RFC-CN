@@ -388,37 +388,56 @@
 
 
 
-## Appendix 1: Transaction Cost Analysis
 ## 附件1 : 交易成本分析
-
-[待翻译，有空的朋友一起来翻一下吧]
 
 
 Nervos CKB uses Proof of Work based Nakamoto consensus, similar to what's used in Bitcoin - for more details, please see the "Nervos Consensus Paper"
 
+Nervos CKB 使用基于中本聪共识的工作量证明，类似于比特币使用的。相关信息请参考「Nervos Consensus Paper」。
+
 The economics of the consensus process is designed to incentivize nodes to participate in the consensus process and provide measurements that nodes can use to prioritize transactions.  At the core, it's designed to help consensus nodes answer the question: "Is this transaction worth to be included in the next block if I had the opportunity to produce the block?"
+
+共识的经济学旨在激励节点参与共识过程，并提供节点可以用来对交易进行优先级排序的度量方法。其核心目的是帮助共识节点回答以下问题:“如果我有机会生成下一个块，这笔交易是否值得包含在这个块中?”
 
 A block producing node can do a cost/benefit analysis to answer this question. The benefit of including a transaction is to be able to collect its transaction fee, and the cost of including a transaction in a block has three parts:
 
+出块节点可以做一个成本/收益分析来回答这个问题。打包一笔交易的好处是能够获得这笔交易的交易费用，打包这笔交易的成本主要分有三个部分：
 
-- Fee Estimation Cost (![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/001.png) ): this is the cost to estimate the maximum possible income if a node where to include a transaction
+- Fee Estimation Cost (![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/001.png) ): this is the cost to estimate the maximum possible income if a node where to include a transaction.
 - Transaction Verification Cost (![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/002.png) ): blocks containing invalid transactions will be rejected by the consensus process, therefore block producing nodes have to verify transactions before including them in a new block.
 - State Transition Cost (![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/003.png)）: after a block is produced, the block producing node has to perform local state transitions defined by state machines of the transactions in the block.
 
+- 手续费估算成本 (![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/001.png) )：用于估算打包这笔交易的最大收入。
+- 交易验证成本 (![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/002.png) )：包含无效交易的块将会被共识协议拒绝，因此出块节点在出块之前必须校验这笔交易。
+- 状态转换成本 (![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/003.png))：出块之后，出块节点必须执行由这个块中交易的状态机定义的本地状态转换。
+
 In particular, transaction verification, ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/004.png)  has two possible steps:
+
+需要注意的是，交易验证成本可能分为2部分：
 
 - ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/005.png): Authorization Verification Cost
 
 - ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/006.png): State Transition Verification Cost
 
-We use CPC and EVC to represent Complete Processing Cost and Estimation and Verification Cost:
+- ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/005.png): 授权验证成本
 
+- ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/006.png): 状态转换验证成本
+
+We use CPC and EVC to represent Complete Processing Cost and Estimation and Verification Cost:
+我们用 CPC 和 EVC 来表示 完整处理成本 和 估算及验证成本：
 - CPC: Complete Processing Cost
   - ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/007.png)
 - EVC: Estimation and Verification Cost;
   - ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/008.png)
+  
+ - CPC: 完整处理成本
+  - ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/007.png)
+- EVC: 估算及验证成本
+  - ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/008.png)
 
-### Bitcoin's Transaction Cost Analysis
+### 比特币交易成本分析
+
+[待翻译，有空的朋友一起来翻一下吧]
 
 Bitcoin allows flexible authorization verification with the Bitcoin Script. Users can script the authorization rules and build smart contracts through ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/009.png) when creating transactions. Bitcoin has a fixed state transition semantic, which is to spend and create new UTXOs. In Bitcoin, the result of the state transitions are already included in transactions, therefore the State Transition Cost (STC) is 0.
 

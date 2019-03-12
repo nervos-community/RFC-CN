@@ -426,14 +426,12 @@ In particular, transaction verification, ![](https://raw.githubusercontent.com/J
 We use CPC and EVC to represent Complete Processing Cost and Estimation and Verification Cost:
 我们用 CPC 和 EVC 来表示 完整处理成本 和 估算及验证成本：
 - CPC: Complete Processing Cost
+- CPC: 完整处理成本
   - ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/007.png)
-- EVC: Estimation and Verification Cost;
-  - ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/008.png)
-  
- - CPC: 完整处理成本
-  - ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/007.png)
+- EVC: Estimation and Verification Cost
 - EVC: 估算及验证成本
   - ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/008.png)
+
 
 ### 比特币交易成本分析
 

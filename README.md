@@ -424,7 +424,9 @@ In particular, transaction verification, ![](https://raw.githubusercontent.com/J
 - ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/006.png): 状态转换验证成本
 
 We use CPC and EVC to represent Complete Processing Cost and Estimation and Verification Cost:
+
 我们用 CPC 和 EVC 来表示 完整处理成本 和 估算及验证成本：
+
 - CPC: Complete Processing Cost
 - CPC: 完整处理成本
   - ![](https://raw.githubusercontent.com/Jack0814/Picture/master/Img%202/007.png)

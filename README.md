@@ -175,7 +175,7 @@
 - the system has to be able to continuously raise revenue from its state users to pay miners for providing this resource. This serves both purposes of balancing miner’s economics and providing incentives for users to clear unnecessary states sooner than later. 
 - 必须限制全球状态的增长，以便为全节点参与是在可预测的状况下。理想情况下，成本能控制在非专业参与者可以负担的范围内，以保持网络最大程度的去中心化与抗审查。
 - 随着全球状态的有限增长，价格的上升与降低将由市场决定。特别是当状态存储空间快满的时后，需要将状态存储的成本提高，而当它大部分为空时，需要降低成本，这是非常吸引人的。
-- 系统需要能够不断提高其状态用户的费用，以支付矿工提供这种资源。这有助于平衡矿工的经济收入，同时让用户被激励去清除不必要的状态。
+- 系统需要能够不断收取其状态用户的租金，以支付矿工提供这种资源。这有助于平衡矿工的经济收入，同时让用户被激励去清除不必要的状态。
 
  Just like how Bitcoin throttles and forces pricing on bandwidth, and Ethereum throttles and forces pricing on computation, to keep a blockchain network long term decentralized and sustainable, we have to come up with a way to constrain and price the global state. This is especially important for preservation focused, Store of Assets networks, where usage of the network is not about transactions that mostly happen off-chain, but the cost of ongoing occupation of the global state. 
 
@@ -387,7 +387,7 @@
  在类似于 Plasma 的第 2 层解决方案中，典型的模式是用户将原生代币抵押在第 1 层区块链的智能合约中以换取第 2 层上的交易代币。具有足够信誉的第 2 层运营商可以让用户提交固定时限内的抵押，然后使用这些抵押资产做为贷款，为市场提供流动性并赚取收入。这为第 2 层解决方案的运营商在第 2 层收取的费用之外，提供了额外的收入。
 
 
-
+## Appendix 1: Transaction Cost Analysis
 ## 附件1 : 交易成本分析
 
 

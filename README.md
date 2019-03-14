@@ -227,7 +227,7 @@
 
  Let's suppose at the time of a secondary issuance event, 60% of all CK Bytes are used to store state, 35% of all CK Bytes are deposited and locked in the NervosDAO, and 5% of all CK Bytes are kept liquid. Then 60% of the secondary issuance goes to the miners, 35% of the issuance goes to the NervosDAO to be distributed to the locked tokens proportionally. The use of the rest of the secondary issuance - in this example, 5% of the that issuance - is determined by the community through the governance mechanism. Before the community can reach agreement, this part of the secondary issuance is going to be burned.
 
- 假设在「二级发行」时，所有 CK Byte 的 60％ 用于存储状态，所有 CK Byte 的 35％ 被存放并锁定在 NervosDAO 的合约中，剩下的 CK Byte 中的 5％ 保持流动性。那每次进行二级发行出块奖励的时候，60％ 的「二级发行」会奖励给矿工，35％ 的会进入 NervosDAO 按比例分配给锁定的代币（用户），最后剩下的 5％ 既没有占用也没有锁币的部分是归交治理机制处理；在治理没有完善的方案前烧掉。
+ 假设在「二级发行」时，所有 CK Byte 的 60％ 用于存储状态，所有 CK Byte 的 35％ 被存放并锁定在 NervosDAO 的合约中，剩下的 CK Byte 中的 5％ 保持流动性。那每次进行二级发行出块奖励的时候，60％ 的「二级发行」会奖励给矿工，35％ 的会进入 NervosDAO 按比例分配给锁定的代币（用户）。最后剩下的 5％ （既没有占用也没有锁币的部分）由社区通过治理机制决定处理；在社区达成一致方案前，这一部分将被销毁。
 
  For long term token holders, as long as they lock their tokens in the NervosDAO, the inflationary effect of secondary issuance is only nominal. For them it’s as if the secondary issuance doesn’t exist and they’re holding hard-capped tokens like Bitcoin. 
 

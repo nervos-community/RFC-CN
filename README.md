@@ -157,7 +157,7 @@
 - the “pay once, occupy forever” state storage model gives very little incentive for users to voluntarily clear state and reduce the size of global state
 - 全球状态的增长不受任何限制，并且可以无限增长，因此全节点的参与成本并不确定
 - 该系统为扩大状态存储提高了一次性收费，但矿工和全节点必须承担长期存储费用
-- 没有明显的理由说明为什么扩展存储的成本应该以固定的 Gas 定价（Gas 用于计算一个单位的计算费用）
+- 没有明显的理由说明为什么扩展存储的成本应该以固定的 Gas 定价（Gas 用于定价一个计算单位的费用）
 - 「一次性支付，永远占用」的状态存储模型的激励很小，很难让用户自愿清除状态和减少全球状态的占用
 
  The Ethereum community is actively working on this problem, and the leading solution is to charge smart contract “state rent” - contracts have to periodically pay fees based on the size of its state. If the rent is not paid, the contract goes to “hibernation” and not accessible before the payment is current again. We see several difficult-to-solve problems with this approach: 
@@ -211,7 +211,7 @@
 
  有两种类型的原生代币发行政策。 「基础发行」的总供给量有限，发行时间表与比特币类似 - 基本发行数量大约每 4 年减半一次，直到所有「基础发行」的代币被挖出来。所有「基础发行」代币都会奖励给矿工，作为保护网络的激励措施。
 
-  「二级发行」的设计则是为了收取状态租金，每年的发行数量是不变的。「基础发行」停止后，「二级发行」仍会继续。
+  「二级发行」的设计则是为了收取状态租金，每年的发行率是不变的。「基础发行」停止后，「二级发行」仍会继续。
 
 
 ### 6.3 收取二级发行的状态租金和 NervosDAO 设计

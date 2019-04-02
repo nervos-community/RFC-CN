@@ -37,7 +37,7 @@
 
  The Bitcoin protocol uses its native currency to incentivize miners to validate and produce blocks. The Nakamoto Consensus considers the longest chain as the valid chain, which encourages block producing miners to propagate new blocks as soon as they produce them, validate blocks as soon as they receive them to have the whole network achieve consensus on the global state. 
 
- 比特币协议使用原生代币激励矿工验证交易和挖矿。Nakamoto 共识遵循最长链原则，以此激励矿工在挖出新块后立即广播，在收到新块后立即验证，以达成全网共识。
+ 比特币协议使用原生代币激励矿工验证交易和挖矿。中本聪共识协议遵循最长链原则，以此激励矿工在挖出新块后立即广播，在收到新块后立即验证，以达成全网共识。
 
  The native tokens of the Bitcoin network function both as a utility token and an asset. When bitcoins function as a utility, they can be used to pay transaction fees; when they function as an asset, they can be used to preserve value over time. Those two use cases are often referred to as the “Medium of Exchange” (MoE) use case and the “Store of Value” (SoV) use case. The two use cases are not mutually exclusive. They are both important for the network to function. However, it’s important to study the economic motives of the users of both use cases as a guide to analyze the sustainability of the Bitcoin network.
 
@@ -102,7 +102,7 @@
 
  This is especially true when a well designed inter-blockchain protocol can allow trust-less state transfers and fraud repudiation of transactions. We already can see examples of transactional users prioritizing cost over security in centralized crypto-asset exchanges and not-so-decentralized blockchains - despite their flaws, they’re still popular because of their transactional efficiency.
 
- 当设计良好的跨链协议可以允许无信任的状态转移与抗交易作恶时，这样的状况就更明显了。我们已经可以看到很多的例子反映了 MoE 用户会优先考虑低成本的手续费而不是更高的安全性，他们往往选择在中心化的交易所和没那么去中心化的区块链上交易。尽管这些网络环境存在安全缺陷，但由于交易效率的原因，它们仍然很受欢迎。
+ 当设计良好的跨链协议可以允许无信任的状态转移与交易的欺诈反悔时，这样的状况就更明显了。我们已经可以看到很多的例子反映了 MoE 用户会优先考虑低成本的手续费而不是更高的安全性，他们往往选择在中心化的交易所和没那么去中心化的区块链上交易。尽管这些网络环境存在安全缺陷，但由于交易效率的原因，它们仍然很受欢迎。
 
  Competitive preservation platforms need to be sustainably secure and censorship resistant. It requires an economic model designed not around transactions that happen moment-in-time, but around the ongoing occupation of the global state, and have users pay for the network infrastructure metered in their consumption of this critical resource.
 
@@ -203,7 +203,7 @@
  
  A cell's occupied capacity could be equal to or less than its specified capacity. For example, for a 1000 byte cell, 4 bytes would be used to specify its own capacity, 64 bytes for the lock script and 128 bytes for storing state. Then the cell's current occupied capacity is 196 bytes, but with room to grow up to 1000 bytes.
  
- 一个 Cell 占用的空间应该等于或小于其指定空间。例如，对于一个 1000 Byte 的 Cell，使用 4 Bytes 来指定自己的空间，锁定脚本使用 64 Bytes，存储状态使用 128 Bytes。因此这个 Cell 实际占用 196 Bytes，但是有充足的空间增长至 1000 Bytes。
+ 一个 Cell 占用的空间应该等于或小于其指定容量。例如，对于一个 1000 Byte 的 Cell，指定自己的容量使用 4 Bytes，锁定脚本使用 64 Bytes，存储状态使用 128 Bytes。因此这个 Cell 实际占用 196 Bytes，但是空间可以增长到 1000 Bytes。
 
 ### 6.2 代币发行政策
 
@@ -220,7 +220,7 @@
 
   Since the native tokens represent right to expand the global state, the issuance policy of the natives tokens bounds the state growth. As state storage is bounded and becomes a scarce resource like bandwidth in Bitcoin and computation throughput in Ethereum, they can be market priced and traded. State rent adds the necessary time dimension to the fee structure of state storage occupation. Instead of mandating periodic rent payments, we use a two step approach as a “targeted inflation” scheme to collect this rent: 
 
- 由于原生代币代表了占用全局状态的权利，所以代币发行政策会限制状态的增长。由于状态存储受限制并且成为了稀缺资源，就好比比特币的带宽和以太坊的计算吞吐量，它们可以在市场上被定价和交易。状态租金在状态占用的费用结构上，增加了必要的时间维度。我们采用两个步骤作为「目标通胀」框架来收取这笔租金，而不是强制定期收取租金：
+ 由于原生代币代表了占用全局状态的权利，所以代币发行政策会限制状态的增长。由于状态存储受限制并且成为了稀缺资源，就好像比特币的带宽和以太坊的计算吞吐量，它们可以在市场上被定价和交易。状态租金在状态占用的费用结构上，增加了必要的时间维度。我们采用两个步骤作为「通货膨胀目标制」框架来收取这笔租金，而不是强制定期收取租金：
 
 - On top of the base issuance, we add the secondary issuance which can be seen as “inflation tax” to all existing token holders. For users who use their CK Bytes to store state, this recurring inflation tax is how they pay state rent to the miners.
 - However, we have also collected rent from the CK Bytes that are not used to store state, and we need to return to them what we collected. We allow those users to deposit and lock their native tokens into a special contract called the NervosDAO. The NervosDAO receives part of the “secondary issuance” to make up for the otherwise unfair dilution. 
@@ -240,7 +240,7 @@
 
  Miners are compensated with both block rewards and transaction fees. They receive all of the base issuance, and part of the secondary issuance. In the long term when base issuance stops, miners still receive state rent income that’s independent of transactions but tied to the adoption of the common knowledge base. 
 
- 矿工会获得两种出块奖励和交易手续费。他们将会收到所有的「基本发行」，以及部分的「二级发行」。长期来看，当「基础发行」停止后，矿工仍然可以获得状态租赁的收入。
+ 出块奖励和交易手续费都会补偿矿工。他们将会获得所有的「基本发行」，以及部分的「二级发行」。长期来看，当「基础发行」停止后，矿工仍然可以获得状态租赁的收入。
 
 ### 6.5 交易手续费支付
 
@@ -254,7 +254,7 @@
 
  The number of units of computation (called “cycles”) also needs to be submitted as part of the transaction. Nervos CKB is an “off-chain computation, on-chain verification” platform, therefore the cycles of computation are known by the client who submits the transaction. When producing blocks, miners order transactions based on both transaction fees and the number of computation cycles necessary for transaction validation, maximizing its per-computation-cycle income within the computation and bandwidth throughput restrictions. 
 
- 计算的单位数量（计算循环数）也需要作为交易的一部分来提交。 Nervos CKB 是一种「链下计算，链上验证」的平台，因此提交交易的客户端知道计算循环数。在出块时，矿工根据交易费用和交易验证所需的计算循环来制订这个交易，最大化每一个计算循环数和带宽吞吐量限制内的收入。
+ 计算的单位数量（计算循环数）也需要作为交易的一部分来提交。 Nervos CKB 是一种「链下计算，链上验证」的平台，因此提交交易的客户端知道计算循环数。在出块时，矿工根据交易费用和交易验证所需的计算循环来订购交易，最大化每一个计算循环数和带宽吞吐量限制内的收入。
 
   In the Nervos CKB, the transaction fees can be paid with the native tokens, user defined tokens or a combination of both.
 
@@ -298,8 +298,8 @@
 
  我们为了确保 Nervos CKB 成为「资产存储」协议并保证安全性而做出主要的设计选择是：
 
-- 我们的原生代币代表了对状态存储的空间。这意味着如果想在平台上持有资产，同时也要求拥有原生代币。这代表了在平台上持有资产等于创造了对原生代币的需求，从而创建了一个有效的值捕获机制到原生代币中。这是「资产存储」平台随着时间的推移，可以持续增加安全预算的唯一方式，而不是基于投机和利他主义。
-- 二次发行确保对矿工的补偿是可预测的，并且基于保存价值的需求而不是可交易的需求。它还消除了出块奖励停止后如中本聪协议的共识节点，存在的激励矛盾问题。 NervosDAO 是「二级发行」所导致通胀效应的反制力量，以确保长期持有代币的人不会因为「二级发行」而被稀释。
+- 我们的原生代币代表了对状态存储的空间。这意味着如果想在平台上持有资产，同时也要求拥有原生代币。这代表了在平台上持有资产等于创造了对原生代币的需求，从而创建了一个有效的价值捕获机制到原生代币中。这是「资产存储」平台随着时间的推移，可以持续增加安全预算的唯一方式，而不是基于投机和利他主义。
+- 二次发行确保对矿工的补偿是可预测的，并且基于保存价值的需求而不是可交易的需求。它还消除了出块奖励停止后，中本聪共识协议的节点存在的激励矛盾问题。 NervosDAO 是「二级发行」所导致通胀效应的反制力量，以确保长期持有代币的人不会因为「二级发行」而被稀释。
 
   For a purpose of keeping the network decentralized and censorship resistant, we believe it’s important to limit the resource requirements of consensus and full nodes. We protect the operating cost of nodes by regulating the throughput of computation and bandwidth, similar to how it’s accomplished with Bitcoin and Ethereum. We regulate the state storage with a combination of a “cap and trade” pricing scheme and opportunity cost based cost model for storage users. 
 
@@ -310,11 +310,11 @@
 
   In a typical smart contract platform, participants of the network have different interests - users want cheaper transactions, developers want adoption of their applications, miners want higher income, and holders want appreciation of their tokens. Those interests are not well aligned, and oftentimes in conflict - for example, more adoption won’t give cheaper transactions (they’ll be more expensive as more demand is put on the blockchain); cheaper transactions won’t give more income to the miners; higher token price won’t help with transaction cost (the opposite could happen if users don’t adjust their local transaction fee setting). Decentralized computation platforms provide value through processing transactions. The price of their tokens doesn’t materially change the intrinsic value of the network. For example, Ether’s price doubling doesn’t increase or decrease Ethereum’s intrinsic value as a decentralized computation platform. Assuming the gas price doesn’t change, a user can accomplish the same task with the same cost on the network. This makes token holders of Ethereum only take the role of an investor, instead of active contributors.
 
- 在典型的智能合约平台中，网络的参与者有不同的意图 - 用户希望更便宜的交易手续费，开发人员希望他们的 App 被使用，矿工希望获得更高的收入，持有者希望他们的代币增值。每一类的参与者的利益并不一样，而且经常发生矛盾 - 例如，更多的 App 使用不会给予让交易手续费更便宜（随着对区块链的需求增加，它们还会更加昂贵）；较便宜的交易不会给矿工带来更多收入；较高的代币价格将无助于交易成本（如果用户不调整其本地交易费用设置，则可能发生相反的情况）。去中心化计算平台通过处理交易提供价值。他们的代币价格并没有实质性地改变网络的内在价值。例如以太坊作为去中心计算平台，价格的增加或减少并不会影响代币的内在价值。假设 gasPrice 没有变化，用户可以在网络上以相同的成本完成相同的任务。这使得以太坊的代币持有者只扮演了投资者的角色，而不是积极的贡献者。
+ 在典型的智能合约平台中，网络的参与者有不同的意图 - 用户希望更便宜的交易手续费，开发人员希望他们的 App 被使用，矿工希望获得更高的收入，持有者希望他们的代币增值。每一类的参与者的利益并不一样，而且经常发生矛盾 - 例如，更多的 App 使用不会带来更便宜的交易手续费（随着对区块链的需求增加，它们还会更加昂贵）；较便宜的交易不会给矿工带来更多收入；较高的代币价格将无助于降低交易成本（如果用户不调整其本地交易费用设置，则会发生相反的情况）。去中心化计算平台通过处理交易提供价值。他们的代币价格并没有实质性地改变网络的内在价值。例如以太币价格的增加或减少并不会影响以太坊作为去中心化计算平台的内在价值。假设 gasPrice 没有变化，用户可以在网络上以相同的成本完成相同的任务。这使得以太坊的代币持有者只扮演了投资者的角色，而不是积极的贡献者。
 
  In the Nervos CKB, Store of Assets users want security of their assets; developers want more adoption, reflected in more assets preserved; miners want higher income and token holders want price appreciation of their tokens. Higher token price supports everyone’s objective - the network would be more secure, miners get higher income, and token holders get better return. Aligning all participants’ incentives allows the network to best harness network effects to grow its intrinsic value. It also produces a more cohesive community and makes the system less prune to governance challenges.
 
- 在 Nervos CKB 中，资产存储用户希望其资产安全；开发者希望 App 更多的被使用，反映在更多的资产价值保存；矿工希望获得更高的收入，而代币持有者希望他们的代币价格升值。更高的代币价格支持每个人的利益 - 网络将更安全，矿工获得更高的收入，并且代币持有者获得更好的回报。将所有参与者的激励措施对齐，使网络能够最好地利用网络效应来增强其内在价值。它还产生了一个更具凝聚力的社区，使得该系统面临更少的治理挑战。
+ 在 Nervos CKB 中，资产存储用户希望其资产安全；开发者希望 App 更多的被使用，反映在更多的资产价值得到保存；矿工希望获得更高的收入，而代币持有者希望他们的代币价格升值。更高的代币价格支持每个人的利益 - 网络将更安全，矿工获得更高的收入，并且代币持有者获得更好的回报。将所有参与者的激励措施对齐，使网络能够最好地利用网络效应来增强其内在价值。它还产生了一个更具凝聚力的社区，使得该系统面临更少的治理挑战。
 
 
 ### 7.3 引导网络效应和网络增长
@@ -325,7 +325,7 @@
 
  The pro-cyclical loop of the network’s adoption and network’s intrinsic value provides a powerful growth engine for the network. Together with how the network’s value accrues to the native tokens and gets captured by long term holders, it makes the network’s native token an excellent candidate for store of value. Compared to Bitcoin as a monetary store of value, the Nervos CKB is similarly designed to be secure and long term decentralized. We believe Nervos CKB has a more balanced and sustainable economic model than Bitcoin, and also comes with intrinsic utility of securing crypto-assets and common knowledge. 
 
- 网络采用的顺向循环和网络的内在价值为其本身提供了强大的增长引擎。连同网络如何逐渐累积价值，到原生代币如何被长期持有者捕获，都使得网络中的原生代币成为价值存储的绝佳候选者。与比特币作为货币存储价值相比，Nervos CKB 同样设计为安全且长期去中心化的。我们认为 Nervos CKB 拥有比比特币更加平衡和可持续的经济模型，并且还具有保护加密资产及数据的功用。
+ 网络采用的顺周期循环和网络的内在价值为其本身提供了强大的增长引擎。加上网络如何逐渐累积价值，到原生代币如何被长期持有者捕获，都使得网络中的原生代币成为价值存储的绝佳候选者。与比特币作为货币存储价值相比，Nervos CKB 同样设计为安全且长期去中心化的。我们认为 Nervos CKB 拥有比比特币更加平衡和可持续的经济模型，并且还具有保护加密资产及共识的功用。
 
 ### 7.4 开发者在「一级资产」平台中的成本
 
@@ -353,7 +353,7 @@
 
  The effective interest rate of lending is determined by the market supply and demand, but the current state of token utilization also plays a big role. Higher utilization of the available global state means less tokens can be made available for lending. This makes the lending interest higher, and makes it more attractive to release state and lock tokens in the NervosDAO to earn income. This serves the purpose to help reduce the global state; lower utilization of the available state means more tokens can be lent out. This makes the lending interest rate lower to encourage adoption. 
 
- 租赁的实际利率由市场供求决定，但代币的占用状况也有著重要的影响。如果全局状态利用率高，代表可用于贷款的代币就更少了。这将使得贷款利息更高，并且使得在 NervosDAO 合约中锁定状态，以获得收入更具吸引力。这有助于减少全局状态。而较低的全局状态利用率代表着有更多的代币可以出租。这将使得贷款利率降低以鼓励使用。
+ 租赁的实际利率由市场供求决定，但代币的占用状况也有著重要的影响。如果全局状态利用率高，代表可用于贷款的代币就更少了。这将使得租赁利率更高，在 NervosDAO 合约中释放状态，锁定代币以获得收入，变得更具吸引力。这有助于减少全局状态。而较低的全局状态利用率代表着有更多的代币可以出租。这将使得贷款利率降低以鼓励使用。
 
 ### 7.6 Nervos Network
 
@@ -363,11 +363,11 @@
 
  Owning and transacting assets on the Nervos CKB come with the highest capital and transaction cost, but is also the most secure. It’s best suited for high value assets and long term asset preservation; Layer 2 solutions can provide scaling for both transaction throughput and state storage, but they would come with either weakened security assumptions or mandate extra steps of repudiation, and often require participants to be online within a time window. If both are acceptable (likely for owning and transacting low value assets for short duration), the Nervos CKB can be used as security anchor to other transaction blockchains, to effectively magnify both its transaction and state storage capacities. 
 
- 在 Nervos CKB 上拥有资产和交易资产需要最高的资本和交易成本，但也是最安全的。它最适合高价值资产和长期资产保值的用途。第 2 层解决方案可以为交易吞吐量和状态存储提供扩展，但它们会带有较弱的安全性证明，或强制要求额外的步骤，而且通常会要求参与者在一定的时间范围内在线。如果两者都可以接受（可能用于短期拥有和交易低价值资产），Nervos CKB 可以被用作其他交易区块链的安全之锚，以有效地放大其交易量和状态存储空间。
+ 在 Nervos CKB 上拥有和交易资产伴随着最高的资本和交易成本，但也是最安全的。它最适合高价值资产和长期资产保值的用途。第 2 层解决方案可以为交易吞吐量和状态存储提供可扩展性，但它们会带有较弱的安全性证明，或强制要求反悔交易的额外步骤，而且通常会要求参与者在一定的时间范围内在线。如果两者都是可接受的（可能用于短期拥有和交易低价值资产），Nervos CKB 可以被用作其他交易区块链的安全之锚，从而有效地放大其交易量和状态存储空间。
 
  If operators of transaction blockchains don’t want to introduce extra security assumptions, they can mandate that high value assets to be issued on the CKB, and low value assets to be issued on transactional blockchains. Then they can use CK Bytes on the CKB to store periodic block commits, challenges and proofs from the transactional blockchains - critical common knowledge for secure off-chain transaction repudiation. If a transaction chain doesn’t mind introducing extra layer of security assumption with a committee-based consensus protocol, they could also have their validators bond CK Bytes on the CKB to explicitly adjust security parameters.
 
- 如果交易区块链的系统不想引入额外的安全证明，他们可以在 CKB 上抵押高价值的资产，并在交易区块链上发行低价值资产。然后，他们可以在 CKB 上使用 CK Bytes 来存储周期性的区块提交，这是交易区块链的挑战和证明 - 这是链下交易安全的关键常识。如果交易链不介意使用基于委员会的共识协议引入额外的安全性证明层，他们也可以让他们的验证节点在 CKB 上绑定 CK Bytes 以明确地调整安全的参数。
+ 如果交易区块链的系统不想引入额外的安全证明，他们可以在 CKB 上抵押高价值的资产，并在交易区块链上发行低价值资产。然后，他们可以在 CKB 上使用 CK Bytes 来存储周期性的区块提交，这是交易区块链的挑战和证明 - 安全链下交易反悔的关键常识。如果交易链不介意使用基于委员会的共识协议引入额外的安全性证明层，他们也可以让他们的验证节点在 CKB 上绑定 CK Bytes 以明确地调整安全的参数。
 
 
 ## 8. 代币经济学的应用
@@ -401,7 +401,7 @@
 
 Nervos CKB uses Proof of Work based Nakamoto consensus, similar to what's used in Bitcoin - for more details, please see the "Nervos Consensus Paper"
 
-Nervos CKB采用的是基于中本聪共识的工作量证明（PoW）共识机制，这一点上类似于比特币。欲了解更多关于Nervos CKB共识机制的细节，请参阅“Nervos Consensus Paper”。
+Nervos CKB采用的是基于中本聪共识协议的工作量证明（PoW）共识机制，这一点上类似于比特币。欲了解更多关于Nervos CKB共识机制的细节，请参阅“Nervos Consensus Paper”。
 
 The economics of the consensus process is designed to incentivize nodes to participate in the consensus process and provide measurements that nodes can use to prioritize transactions.  At the core, it's designed to help consensus nodes answer the question: "Is this transaction worth to be included in the next block if I had the opportunity to produce the block?"
 
@@ -543,7 +543,7 @@ We introduce "cycle" as a unit of measurement for computation complexity in the 
 
 Nodes can set their *cyclemax* to different values. *cyclemax* only impacts how a block producing node accepts new transactions, not how a node accepts transactions in a new block. Therefore, it's not going to cause inconsistency in the validation of blocks. A valid block needs valid proof of work, and this cost discourages a block producing node to include an invalid transaction with high *cycles* value.
 
-节点可以将其*cyclemax*设定为不同的值，*cyclemax*仅影响当前的出块节点是否接受打包这笔交易，而不影响其他节点接受新块中的交易，因此，它并不会导致区块验证的不一致。一个有效的块需要有效的工作量证明，因此并不鼓励出块节点去接受一个具有很高*cycles* 值，但是无效的转帐交易。
+节点可以将其*cyclemax*设定为不同的值，*cyclemax*仅影响当前的出块节点是否接受打包这笔交易，而不影响其他节点接受新块中的交易，因此，它并不会导致区块验证的不一致。一个有效的块需要有效的工作量证明，因此并不鼓励出块节点去接受一个具有很高*cycles* 值的无效转帐交易。
 
 The following table shows the runtime differences in Bitcoin, Ethereum and the Nervos CKB.
 
